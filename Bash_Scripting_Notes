@@ -97,4 +97,12 @@ Example:i am using symbol
 [ 3 -lt 5 -o 6 -gt 5 ]   --> 1  any one value is true Result is True
 
 -n [ 5 -gt 4 ]   --> 0 
-          
+       
+
+=========================================================================================
+
+if, elif , else conditional statements
+
+
+
+
