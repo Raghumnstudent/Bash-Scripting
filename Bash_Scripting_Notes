@@ -1,0 +1,100 @@
+The difference between the scripting and automating:
+scripting                                                         programing
+*write to automate the particular task                      *one program can do many tasks
+*do not require the compiling,it is interpreter             *must compile to execute
+
+========================================================================================
+
+bash  stands --> born again shell --> bash is advanced version of shell
+
+
+"#!/bin/bash"  -->#!/bin/bash  is used to define the which shell we are using to execute the commands
+
+*cat /etc/shells  --> check how many shells are available in your system
+
+*cat /etc/*release*  --> check os and their version
+
+*creating shell sctipt file with .sh is best practice(without .sh will also work) and after creating change into executable mode
+Run --> chmod 755 your_file_name.sh
+
+*for comment in shell script use # this is comment
+
+=========================================================================================
+
+*there are two types of variables in any system
+       i)system varibales (The variables all letters in capital are system variable generally but user also can define with capital letter)
+         use command "env" or "printenv" to check the system varibales
+         example --> PATH
+       ii)user defined variables in terminal
+          export name="Raghu"
+          export NAME="Ravi" 
+          this is user defined variables
+
+variables must be starts with only letters,variables are case sensitive(name and Name both are different varibles).
+defining variable in script:
+Name=Raghu
+Age=24
+
+=========================================================================================
+
+The special variables in bash
+$*  --> it stores the complete set of positional parameters as single string
+$#  --> it set to number of arguments specified
+$0  --> The filename of the current script
+$1  --> stoes the first argument passed after file name
+"$@" --> each quoted string treated as a seperate argument
+$?  --> exit status of last command
+$$  --> process id of current script
+$!  --> process id of the last background job
+
+=========================================================================================
+
+*if,elif and else condition operators and format
+
+     if condition
+     then 
+        statement 1
+     elif condition
+     then 
+        statement
+     else
+        statement
+     fi
+=========================================================================================
+
+Relatinal operators:
+
+  Interger comparition --> i always go with below letters approach for comparition
+
+       * -eq  --> equal to                                if [ $a -eq $b ]
+       * -ne  --> not equal                               if [ $a -ne $b ]
+       * -gt  --> greater than                            if [ $a -gt $b ]
+       * -ge  --> greater than or equal                   if [ $a -ge $b ]
+       * -lt  --> less than                               if [ $a -lt $b ]
+       * -le  --> less than or equal                      if [ $a -le $b ]
+  
+  String comparition
+       * = or == --> equal to   if [ "$a" == "$b" ] or if [ "$a" = "$b" ] both are same
+       * !=      --> not equal  if [ "$a" != "$b" ] 
+       * -z --> string is null,has zero length if [ -z "$a" ]
+
+=========================================================================================
+Logical operators: To write multiple conditions,validate mutiple conditions and execute the statement
+
+In logical operatos,i always go with letters approach to with one approach
+
+AND  --> -a or &&               OR   --> -o or ||                  NOT  --> -n or ! 
+
+[ 1 -a 1 ] --> 1                  [ 1 -o 1 ] --> 1                -n [ 0 ]  --> 1 
+[ 1 -a 0 ] --> 0                  [ 1 -o 0 ] --> 1                -n [ 1 ]  --> 0
+[ 0 -a 1 ] --> 0                  [ 0 -o 1 ] --> 1
+[ 0 -a 0 ] --> 0                  [ 0 -o 0 ] --> 0      
+
+Example:i am using symbol
+                   
+[ 5 -gt 6 -a  8 -lt 10 ]  --> 0 any one value is false Result is false
+
+[ 3 -lt 5 -o 6 -gt 5 ]   --> 1  any one value is true Result is True
+
+-n [ 5 -gt 4 ]   --> 0 
+          
