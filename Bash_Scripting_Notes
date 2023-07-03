@@ -148,10 +148,42 @@ fi
 while loop --> check the condition and execute the block of code if the condition is true, 
 it continues untill the condition become false
 
+syntax:
+
 while [ condition ]
 do
 ...
 ...
 ...
 done
+
+=========================================================================================
+
+for loop  --> itirate over the any data type(list,numbers,string) and fetch the values
+
+syntax:
+
+for <variable> in <values to variables>
+do
+<execution commands>
+done
+
+=========================================================================================
+
+case statement --> it is used to do condition branching based on value of variable and execute the that block of case
+
+syntax:
+
+case value in
+pattern1)
+# commands to execute if value matches to pattern1
+;;
+pattern2)
+# commands to execute if the value matches to pattern2
+;;
+pattern3)
+# commands to execute if the value matches to pattern3
+;;
+*)
+esac
 
