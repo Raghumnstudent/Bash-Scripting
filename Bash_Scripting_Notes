@@ -10,6 +10,8 @@ bash  stands --> born again shell --> bash is advanced version of shell
 
 "#!/bin/bash"  -->#!/bin/bash  is used to define the which shell we are using to execute the commands
 
+In Bash scripting indentation will not matter,better keep indentation like python to understand other well
+
 *cat /etc/shells  --> check how many shells are available in your system
 
 *cat /etc/*release*  --> check os and their version
@@ -186,4 +188,33 @@ pattern3)
 ;;
 *)
 esac
+
+=========================================================================================
+
+continue statement
+
+In bash scripting,continue statement is used to skip the rest of current iteration based on condition 
+and move on to next iteration
+
+it is commonly used within the loops like for loop and while loop
+
+=========================================================================================
+
+set command in bash script
+
+In bash scripting,set command is used to set values to postional arguments and change the values of shell options,
+also used unseting the value to  variables
+
+shell options:
+ 
+set -e  --> Exit immidiately if any command fail , always use "set -e" in script to exit if single command fail
+set +e  --> Don't exit even commands fail
+
+set -x --> xtrace option --> enable the debugging mode,print the command with additionally expands variables and arguments before printing them
+set +x --> disable the debugging mode
+
+set -v  --> verbose option --> print each command as they written in script
+set +v  --> disable command echoing
+
+set -u  --> nounset option  --> strict mode --> treat the refering an undefined variable as error
 

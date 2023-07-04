@@ -7,10 +7,12 @@
 
 for i in 1 3 4 5 
 do
-echo $i
+    echo $i
 done
+
+echo "================================================"
 
 for s in R a g h u
 do
-echo "$s"
+    echo "$s"
 done
