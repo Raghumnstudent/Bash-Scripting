@@ -207,14 +207,33 @@ also used unseting the value to  variables
 
 shell options:
  
-set -e  --> Exit immidiately if any command fail , always use "set -e" in script to exit if single command fail
+set -e  --> Exit on error mode, Exit immidiately if any command fail , always use "set -e" in script to exit if single command fail
 set +e  --> Don't exit even commands fail
 
-set -x --> xtrace option --> enable the debugging mode,print the command with additionally expands variables and arguments before printing them
+set -x --> xtrace option --> enable the debugging mode,print the command with additionally expands variables and arguments before, give more info for de
 set +x --> disable the debugging mode
 
-set -v  --> verbose option --> print each command as they written in script
+set -v  --> verbose option --> print each command as they written in script,if you want see the exactly  written script
 set +v  --> disable command echoing
 
 set -u  --> nounset option  --> strict mode --> treat the refering an undefined variable as error
+
+=========================================================================================
+
+shift command  --> whenever you execute the shift commmand in script, it will shift the right postional argument to left postional argument and left positinal argument will get deleted
+
+Ex:
+
+see the 19.shift_postional_parameters.sh file
+
+=========================================================================================
+
+function  --> In bash scripting,function allow you to group a set of commands and execute them as single unit.
+              function accecpt the arguments,perform the task and return the value if needed
+
+syntax:
+
+function_name(){
+   #Function body(commands to execute)
+}
 
