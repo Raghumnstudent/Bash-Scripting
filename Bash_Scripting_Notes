@@ -21,6 +21,37 @@ Run --> chmod 755 your_file_name.sh
 
 *for comment in shell script use # this is comment
 
+*for multi line comment in the bash scripting
+
+: '
+command1
+command2
+command3
+command4
+'
+
+The commands will not execute in bash script
+
+==========================================================================================
+multi-line commands --> we can write the multiple commands as single line using line continuation characters or
+                        by enclosing the command in parentheses.
+                        i always go with line contunuation method because same method will work for dockerfile
+
+systax:
+
+command arg1 \
+        arg2 \
+        arg3 
+
+Ex:
+  echo "Today is $(date \
+  +%A)"
+ 
+  echo "Hi I am Raghu " \
+       "I am from Malavalli "\
+       "My father name is Nagendra "
+
+
 =========================================================================================
 
 *there are two types of variables in any system
@@ -92,7 +123,7 @@ AND  --> -a or &&               OR   --> -o or ||                  NOT  --> -n o
 [ 0 -a 1 ] --> 0                  [ 0 -o 1 ] --> 1
 [ 0 -a 0 ] --> 0                  [ 0 -o 0 ] --> 0      
 
-Example:i am using symbol
+Example:i am using leters
                    
 [ 5 -gt 6 -a  8 -lt 10 ]  --> 0 any one value is false Result is false
 
@@ -236,4 +267,31 @@ syntax:
 function_name(){
    #Function body(commands to execute)
 }
+
+function_name   --> calling the function
+
+or
+
+function function_name(){
+   #Function body(commands to execute)
+}
+
+function_name   --> calling the function
+
+Both the sytax is valid, we can any of it. i always go with the first syntax
+
+=============================================================================================
+
+basename command in bash script is used to retrieve the last file/directory name of given path
+
+syntax:
+
+basename path_to_file or directory
+
+Ex:
+
+basename /home/nraghu/ravi.txt --> the output of this command is ravi.txt 
+
+basename /home/nraghu  --> the output of this command is nraghu  
+
 
