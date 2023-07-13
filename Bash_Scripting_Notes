@@ -21,7 +21,15 @@ Run --> chmod 755 your_file_name.sh
 
 *for comment in shell script use # this is comment
 
-*for multi line comment in the bash scripting
+*for  writing the multiple line statement and consider that as comment using
+
+<<comment
+variable scope
+if we use local key word while definig variable,that variable is only accessable with that function or block.
+declaring the variable without local key word is called global variable,you can use that variable in any where in the script
+comment
+
+*for commenting the multiple line commands using below approach
 
 : '
 command1
@@ -31,9 +39,13 @@ command4
 '
 
 The commands will not execute in bash script
+command1
+command2
+command3
+command4
 
 ==========================================================================================
-multi-line commands --> we can write the multiple commands as single line using line continuation characters or
+multi-line commands --> we can write the single long commands as in multiple line using line continuation characters or
                         by enclosing the command in parentheses.
                         i always go with line contunuation method because same method will work for dockerfile
 
@@ -261,6 +273,7 @@ see the 19.shift_postional_parameters.sh file
 
 function  --> In bash scripting,function allow you to group a set of commands and execute them as single unit.
               function accecpt the arguments,perform the task and return the value if needed
+              In Bash scripting, the return value is assigned to the $? variable. 
 
 syntax:
 

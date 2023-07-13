@@ -24,15 +24,23 @@ then
 fi
 
 '
-
-adding_numbers () {
-	local num1=$1
-	local num2=$2
-	local sum=$((num1+num2))
+name="Raghu M N"
+age=23
+#The return value will come and store in $? special variable,you can use directly or assging to other variable and use
+adding_numbers() {
+ 	local num1=$1
+        local num2=$2
+	local sum=$(($num1 + $num2))
 	return $sum
 }
 
-result=$(adding_numbers 2 4)
-echo "The sum output is $result"
+adding_numbers 2 4
+echo "The Fuction return sum is $?"
+
+<<comment
+variable scope
+if we use local key word while definig variable,that variable is only accessable with that function or block.
+declaring the variable without local key word is called global variable,you can use that variable in any where in the script
+comment
 
 
