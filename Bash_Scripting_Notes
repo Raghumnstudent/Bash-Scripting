@@ -63,6 +63,25 @@ Ex:
        "I am from Malavalli "\
        "My father name is Nagendra "
 
+=========================================================================================
+Access the varibale value and array value in Bash scripting:
+
+#variable
+Name="Raghu M N"
+age=34
+
+echo "My name is $Name and my age is $age"
+
+#Arrays
+#1) Indexed array --> Elements inside the array is space seperated 
+months=("Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec")
+
+echo "The my birthday date is 13-${months[6]}-1999"
+echo "The entire content of array is ${months[@]}"
+echo "The number of elements in array is ${#months[@]}"
+
+#2)Assosiated array also called as Hash table,dictonary
+
 
 =========================================================================================
 
@@ -150,16 +169,13 @@ if, elif , else conditional statements
 
 syntax:
 
-                if [ condition1 ]
-                then
+                if [ condition1 ];then
                 ...
                 ...
-                elif [ condition2 ]
-                then
+                elif [ condition2 ];then
                 ...
                 ...
-                elif [ condition3 ]
-                then
+                elif [ condition3 ];then
                 ...
                 ...
                 else
@@ -169,14 +185,11 @@ syntax:
 
 nested if:
 
-if [ condition1 ]
-then
-   if [ condition2 ]
-   then 
+if [ condition1 ];then
+   if [ condition2 ];then 
    .....
    .....
-   elif [ condition3 ]
-   then
+   elif [ condition3 ];then
    ....
    ....
    else
@@ -307,4 +320,13 @@ basename /home/nraghu/ravi.txt --> the output of this command is ravi.txt
 
 basename /home/nraghu  --> the output of this command is nraghu  
 
+=============================================================================================
 
+until loop --> The main difference between while loop and until loop is,until loop execute its code when the condtion is false(exit status 1).
+
+syntax:
+
+until [ condition ]
+do
+#commands to execute until the condition becomes true 
+done
