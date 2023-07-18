@@ -1,0 +1,49 @@
+ssh: Securely connect to remote servers over SSH.
+
+scp: Copy files securely between local and remote servers using SSH.
+
+rsync: Efficiently synchronize files and directories between systems.
+
+grep: Search for specific patterns in files or output.
+
+find: Locate files and directories based on various criteria.
+
+awk/sed: Text processing tools for data manipulation and transformation.
+
+chmod/chown: Change file permissions and ownership, important for security and access control.
+
+tar/gzip/zip: Compress and decompress files and directories.
+
+ps: List running processes on the system.
+
+top/htop: Monitor system resource usage and process activity.
+
+kill/killall: Terminate processes by their ID or name.
+
+df/du: Check disk usage on the system and in specific directories.
+
+ping/traceroute: Check network connectivity and trace the route to a host.
+
+netstat/ss: Display network statistics and active network connections.
+
+iptables/ufw: Manage firewall rules to control network traffic.
+
+systemctl: Control systemd services on the system.
+
+journalctl: View system logs using systemd's journal.
+
+curl/wget: Download files from the command line (useful for downloading artifacts or files from the web).
+
+git: Version control system, crucial for source code management.
+
+docker/docker-compose: Containerization tools to package, distribute, and manage applications in containers.
+
+kubectl: Command-line tool for interacting with Kubernetes clusters.
+
+ansible/puppet/chef: Configuration management tools for automating server setup and management.
+
+cron/crontab: Schedule tasks to run at specific times or intervals.
+
+ssh-keygen: Generate SSH key pairs for secure authentication.
+
+journalctl: View system logs using systemd's journal.

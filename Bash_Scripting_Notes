@@ -73,15 +73,36 @@ age=34
 echo "My name is $Name and my age is $age"
 
 #Arrays
-#1) Indexed array --> Elements inside the array is space seperated 
+1) Indexed array --> Elements inside the array is space seperated 
+
 months=("Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec")
 
 echo "The my birthday date is 13-${months[6]}-1999"
 echo "The entire content of array is ${months[@]}"
 echo "The number of elements in array is ${#months[@]}"
 
-#2)Assosiated array also called as Hash table,dictonary
+2)Assosiated array also called as Hash table,dictonary
 
+declare -A my_details
+
+my_details["name"]="Raghu M N"
+my_details["age"]=24
+my_details["Town"]="Malavalli"
+my_details["Degree_colllege"]="MSRIT"
+
+
+echo "The entire content of array is ${my_details[@]}"
+echo "The numbers of elements in array is ${#my_details[@]}"
+echo "The key in arrya is ${!my_details[@]}"
+
+
+=========================================================================================
+
+The usage of >&2 in bash scripting
+
+The >&2 part in "-$OPTARG" >&2 is used to redirect the error output to standard error (file descriptor 2) 
+instead of the regular standard output (file descriptor 1). 
+It is a way to display error messages on the terminal or log them separately from regular output.
 
 =========================================================================================
 
@@ -330,3 +351,36 @@ until [ condition ]
 do
 #commands to execute until the condition becomes true 
 done
+
+=============================================================================================
+
+getopts  
+
+In Bash scripting, getopts is a built-in command that allows you to parse command-line options and arguments easily.
+It is particularly useful when you want to create scripts that accept various options and parameters from the user. 
+getopts works well for simple option handling, but for more complex cases, 
+you might want to consider using external libraries like getopt
+
+syntax:
+
+while getopts OPTIONSTRING VARIABLE
+do
+  case "$VARIABLE" in
+    OPTION1)
+      # paased value is $OPTARG
+      ;;
+    OPTION2)
+      # paased value is $OPTARG
+      ;;
+    \?)
+      # paased value is $OPTARG
+      ;;
+  esac
+done
+
+In above syntax OPTIONSTRING is mention option user will pass give the value and VARIABLE is simple one varibale
+
+ex:   OPTIONSTING --->  ":a:b:c"  user need to pass arugument like -a Raghu -b M -c N 
+      the value will store in $OPTARG variable
+
+=============================================================================================
