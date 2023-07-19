@@ -22,7 +22,7 @@ do
 done
 
 #2)Assosiated array also called as hash table,dictionary
-
+: '
 declare -A my_details
 
 my_details["Name"]="Raghu M N"
@@ -30,6 +30,9 @@ my_details["Age"]="25"
 my_details["Town"]="Malavali"
 my_details["Degree_college"]="MSRIT"
 
+#or
+'
+declare -A my_details=( ["Name"]="Ravi M N" ["Age"]="22" ["Town"]="Malavalli" ["Degree_college"]="Boys home ITI" )
 #assigning values
 echo "My Town is ${my_details["Town"]}"
 
