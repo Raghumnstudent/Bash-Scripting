@@ -1,0 +1,10 @@
+The cpu utilization is 40% 2023-07-20 09:36:02
+The cpu utilization is 43% 2023-07-20 09:36:30
+The cpu utilization is 37% 2023-07-20 09:36:32
+The cpu utilization is 69% 2023-07-20 09:36:33
+The cpu utilization is 50% 2023-07-20 09:36:34
+The cpu utilization is 34% 2023-07-20 09:36:35
+The cpu utilization is 56% 2023-07-20 09:36:36
+The cpu utilization is 48% 2023-07-20 09:36:38
+The cpu utilization is 51% 2023-07-20 10:02:31
+The cpu utilization is 76% on lptl-nraghu 2023-07-20 10:07:48

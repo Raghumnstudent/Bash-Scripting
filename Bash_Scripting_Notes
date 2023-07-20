@@ -136,11 +136,9 @@ $!  --> process id of the last background job
 
 *if,elif and else condition operators and format
 
-     if condition
-     then 
+     if [condition];then
         statement 1
-     elif condition
-     then 
+     elif [condition];then
         statement
      else
         statement
