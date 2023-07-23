@@ -21,14 +21,6 @@ Run --> chmod 755 your_file_name.sh
 
 *for comment in shell script use # this is comment
 
-*for  writing the multiple line statement and consider that as comment using
-
-<<comment
-variable scope
-if we use local key word while definig variable,that variable is only accessable with that function or block.
-declaring the variable without local key word is called global variable,you can use that variable in any where in the script
-comment
-
 *for commenting the multiple line commands using below approach
 
 : '
@@ -43,6 +35,35 @@ command1
 command2
 command3
 command4
+
+==========================================================================================
+Here  document in bash script:
+Here doc are used to give the info to the user,which have more number of lines,we can't echo the each line.
+we can use the Here doc to print the entire info
+
+<<info
+variable scope
+if we use local key word while definig variable,that variable is only accessable with that function or block.
+declaring the variable without local key word is called global variable,you can use that variable in any where in the script
+info
+
+==========================================================================================
+IFS --> Internal field seperator
+
+In bash,there is some built-in variables are available,one it is IFS
+By default it is set to space
+
+we can use this value assgined to IFS as a field seperator for commands
+
+ex:
+
+group_details=`cat /etc/group | grep nraghu`
+
+IFS=:
+set $group_details
+echo "username=$1 \
+     password=$2  \
+     group_id=$3"  
 
 ==========================================================================================
 multi-line commands --> we can write the single long commands as in multiple line using line continuation characters or
@@ -95,6 +116,19 @@ echo "The entire content of array is ${my_details[@]}"
 echo "The numbers of elements in array is ${#my_details[@]}"
 echo "The key in arrya is ${!my_details[@]}"
 
+
+=========================================================================================
+
+Debugging the shell script.
+
+*use set -x command in script to run the script in debug mode.it will print each command in script and 
+respective output for debugging purpose
+
+*if writen the script in windows docs or other format file,then copy and paste it into .sh file will not work,
+it looks fine without any syntax error because ASII value of windows and unix will diffent that why it will give error.
+use the https://www.shellcheck.net/ website to check this type of issues
+
+*use the any IDE or editor which support the bash script format ex: notepad ++ 
 
 =========================================================================================
 
