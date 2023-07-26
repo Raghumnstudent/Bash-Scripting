@@ -452,3 +452,33 @@ eval "echo Hello $name"
 
 eval "ls -la | grep .txt"
 
+=============================================================================================
+
+logger command:
+
+The logger command allows you to log messages with different priorities (e.g., info, warning, error) to the system log, 
+which can be helpful for monitoring script activities and debugging.
+
+logger "message" options
+
+-h, --help: Display help information and exit.
+-d, --udp: Use UDP to send messages to the syslog server.
+-i, --id: Log the process ID with each message.
+-p <priority>, --priority <priority>: Specify the log priority or facility level for the message. The priority can be a single character (e.g., i for info, w for warning, err for error). Alternatively, you can use facility levels like user, daemon, auth, etc.
+-t <tag>, --tag <tag>: Add a tag to the log entry, which can help identify the source of the log message.
+-u, --socket <socket>: Log the message to the specified socket.
+-s, --stderr: Send the log message to standard error (stderr) instead of the system log.
+-f <file>, --file <file>: Read the message from the specified file. This allows you to log multi-line messages.
+-r <remote_host>, --server <remote_host>: Send the message to a remote syslog server at <remote_host>.
+-n, --server-name: Append the local hostname to the remote syslog server.
+-k, --tcp: Use TCP to send messages to the syslog server.
+-S, --rfc3164: Use the old syslog protocol (RFC 3164) instead of the default RFC 5424.
+-T, --rfc5424: Use the newer syslog protocol (RFC 5424) for log messages (default).
+-P <processname>, --program <processname>: Specify the name of the program or process logging the message.
+-m <message_file>, --msgfile <message_file>: Read the log message from the specified file. Equivalent to -f.
+-V, --version: Display version information and exit.
+
+
+Ex:
+
+logger "The IFS script executed succussfully" -t IFS.sh -i -f $CWD/logs.txt 
