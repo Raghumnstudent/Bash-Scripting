@@ -55,6 +55,28 @@ bash -c "source 3.variables.sh"
 bash -c "source 4.specialvariables.sh"
 
 ==========================================================================================
+
+In every script,as standard we have mention the usage of script if ran wrongly and set the exit on error option
+
+Example:
+
+set -e
+
+if [ $# -lt 6 ]
+then
+   echo "The usage of the script is $0 -u <Nexus_URL> -r <Repository_Name> -k <number>"
+   echo "-u is used to mention the Nexus url with http or https based on your nexus configuration"
+   echo "-r is used to mention the Repository name"
+   echo "-k is used to mention the number of charts to be kept in repository based on their uploaded time"
+   exit 1
+fi
+
+$# is number of arguments need to pass
+6 is number of arguments they need to pass,very based the script 
+To access the value passed to argument, use special variable $1,$2 etc
+
+===============================================================================
+
 Here  document in bash script:
 Here doc are used to give the info to the user,which have more number of lines,we can't echo the each line.
 we can use the Here doc to print the entire info
