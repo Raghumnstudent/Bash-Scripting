@@ -414,18 +414,18 @@ you might want to consider using external libraries like getopt.
 getopts will iterate over the arguments passed into script after the script name and get read of the value if that option have value.
 getopts will validate the passed arguments with options mentioned in optionstring.
 
-every letter in string will represents the one option, if the letter starts with : that option don't have vaule.
+every letter in string will represents the one option and we must mention the : after every letter if that option is argument and for flag no need to mention this symbol : 
 
 Syntax:
 
-getopts 'letters:letters' variable  -->  it will iterate over the all passed aguments and check is that option mentioned in options evenif it is not exits,give error.
+getopts 'letter1:letter2:letter3' variable  -->  it will iterate over the all passed aguments and options and check is that option mentioned in options evenif it is not exits,give error.
 
 the letters before : will be consider as argument and can pass the value
 the letters after the : will be consider as flag
 
 Example:
 
-vaild_options='ah:u'
+vaild_options='a:h:u'
 while getopts $valid_options opt
 do
   case "$opt" in
@@ -436,7 +436,7 @@ do
       # passed value is $OPTARG
       ;;
     u)
-      # passed the option u 
+      #  option is u is flag
       ;;
     \?)
       # passed value is $OPTARG
