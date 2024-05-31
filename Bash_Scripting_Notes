@@ -420,6 +420,9 @@ Syntax:
 
 getopts 'letters:letters' variable  -->  it will iterate over the all passed aguments and check is that option mentioned in options evenif it is not exits,give error.
 
+the letters before : will be consider as argument and can pass the value
+the letters after the : will be consider as flag
+
 Example:
 
 vaild_options='ah:u'
