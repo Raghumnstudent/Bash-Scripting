@@ -71,7 +71,7 @@ then
    exit 1
 fi
 
-$# is number of arguments need to pass
+$# is count number of arguments passed to script
 6 is number of arguments they need to pass,very based the script 
 To access the value passed to argument, use special variable $1,$2 etc
 
