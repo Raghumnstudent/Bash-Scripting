@@ -411,16 +411,21 @@ It is particularly useful when you want to create scripts that accept various op
 getopts works well for simple option handling, but for more complex cases, 
 you might want to consider using external libraries like getopt.
 
-getopts will iterate over the arguments passed  into script after the script name and get read of the valu if that option have value
+getopts will iterate over the arguments passed into script after the script name and get read of the value if that option have value.
+getopts will validate the passed arguments with options mentioned in optionstring.
 
 every letter in string will represents the one option, if the letter starts with : that option don't have vaule.
 
-syntax:
+Syntax:
+
+getopts 'letters:letters' variable  -->  it will iterate over the all passed aguments and check is that option mentioned in options evenif it is not exits,give error.
+
+Example:
 
 vaild_options='ah:u'
-while getopts $valid_options VARIABLE
+while getopts $valid_options opt
 do
-  case "$VARIABLE" in
+  case "$opt" in
     a)
       # passed value is $OPTARG
       ;;
