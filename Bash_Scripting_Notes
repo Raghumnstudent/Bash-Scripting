@@ -5,7 +5,7 @@ scripting                                                         programing
 
 ========================================================================================
 
-bash  stands --> born again shell --> bash is advanced version of shell
+bash stands --> born again shell --> bash is advanced version of shell
 
 
 "#!/bin/bash"  -->#!/bin/bash  is used to define the which shell we are using to execute the commands
@@ -409,28 +409,36 @@ getopts
 In Bash scripting, getopts is a built-in command that allows you to parse command-line options and arguments easily.
 It is particularly useful when you want to create scripts that accept various options and parameters from the user. 
 getopts works well for simple option handling, but for more complex cases, 
-you might want to consider using external libraries like getopt
+you might want to consider using external libraries like getopt.
+
+getopts will iterate over the arguments passed  into script after the script name and get read of the valu if that option have value
+
+every letter in string will represents the one option, if the letter starts with : that option don't have vaule.
 
 syntax:
 
-while getopts OPTIONSTRING VARIABLE
+vaild_options='ah:u'
+while getopts $valid_options VARIABLE
 do
   case "$VARIABLE" in
-    OPTION1)
-      # paased value is $OPTARG
+    a)
+      # passed value is $OPTARG
       ;;
-    OPTION2)
-      # paased value is $OPTARG
+    h)
+      # passed value is $OPTARG
+      ;;
+    u)
+      # passed the option u 
       ;;
     \?)
-      # paased value is $OPTARG
+      # passed value is $OPTARG
       ;;
   esac
 done
 
-In above syntax OPTIONSTRING is mention option user will pass give the value and VARIABLE is simple one varibale
+In above syntax variable $valid_options is used to store the available options of script,will be mentined from user and get value passed to it using OPTAwill pass give the value and VARIABLE is simple one varibale
 
-ex:   OPTIONSTING --->  ":a:b:c"  user need to pass arugument like -a Raghu -b M -c N 
+ex:   OPTIONSTING --->  "ah:u"  user need to pass options like -a Raghu -h M -u
       the value will store in $OPTARG variable
 
 =============================================================================================
