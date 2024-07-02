@@ -5,6 +5,31 @@
 #Created date: Monday 03 July 2023 09:09:02 AM IST
 #Modified date: 
 
+
+<<details
+
+syntax:
+
+case value_to_be_checke
+actual_value_1)
+    block of code execution for actual value 1 satisfaction
+;;
+actual_value_2)
+    block of code execution for actual value 2 satisfaction
+;;
+actual_value_3)
+    block of code execution for actual value 3 satisfaction
+;;
+actual_value_4)
+    block of code execution for actual value 4 satisfaction
+;;
+*)
+  echo "invalid option"
+;;
+esac
+
+details
+
 read -p "Enter a number: " a
 read -p "Enter another number: " b
 

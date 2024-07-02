@@ -10,11 +10,14 @@ read -p "Enter the number for b: " b
 read -p "Enter the number for c: " c
 read -p "Enter the number for d: " d
 
-if [ $a -gt $b -a $a -gt $c -a $a -gt $d ];then
+if [ $a -gt $b -a $a -gt $c -a $a -gt $d ]
+then
    echo "$a is big number"
-elif [ $b -gt $c -a $b -gt $d ];then
+elif [ $b -gt $c -a $b -gt $d ]
+then
    echo "$b is big number"
-elif [ $c -gt $d ];then
+elif [ $c -gt $d ]
+then
    echo "$c is big number"
 else
    echo "$d is big number"

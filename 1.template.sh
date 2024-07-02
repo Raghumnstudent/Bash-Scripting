@@ -2,6 +2,7 @@
 
 #this script is used to create the script with proper details
 
+#there are two impartant options in read,-p promt to get user data 
 read -p "Enter the file name: " file_name
 read -p "Enter your name: " name
 read -p "Enter Purpose of the Script: " purpose
@@ -12,3 +13,13 @@ echo "#Vesrion: " >> $PWD/$file_name.sh
 echo "#Purpose: $purpose" >> $PWD/$file_name.sh
 echo "#Created date: `date`" >> $PWD/$file_name.sh
 echo "#Modified date: " >> $PWD/$file_name.sh
+
+# -a option in read is used to store word read into sequential indices of array variable 
+
+read -p "Enter your details with space seperated: " -a my_details
+
+echo "accessing the values present in array ${my_details[@]}"
+
+echo "accessing the keys present in array ${!my_details[@]}"
+
+#have many other options in read like -d is used to mention delimcontinue until the first character of DELIM is read, rather than newline

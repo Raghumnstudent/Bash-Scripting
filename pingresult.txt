@@ -1,6 +1,0 @@
-PING zeomega.loc (172.24.255.5) 56(84) bytes of data.
-64 bytes from crpvpiszeodc01.zeomega.loc (172.24.255.5): icmp_seq=1 ttl=123 time=361 ms
-
---- zeomega.loc ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 360.533/360.533/360.533/0.000 ms
