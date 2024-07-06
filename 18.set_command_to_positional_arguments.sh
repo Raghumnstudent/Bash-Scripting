@@ -8,6 +8,9 @@
 #Enabling the debug mode. it print each command before executing and expand variables and arguments
 set -x
 
+#set command execute the given command and store the out into positional argument by using delimeter as space
+#Ex: output of date is Friday 05 July 2024 01:13:23 AM IST, every value will be stored in each postional argument
+
 set `date`
 
 echo "Today is $1"

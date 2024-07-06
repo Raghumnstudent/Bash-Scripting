@@ -14,6 +14,11 @@ echo "#Purpose: $purpose" >> $PWD/$file_name.sh
 echo "#Created date: `date`" >> $PWD/$file_name.sh
 echo "#Modified date: " >> $PWD/$file_name.sh
 
+# In every script we must be mention the usage of script like how to use the scrip,validate user is passing required argument or not and 
+#even  pass argument unorder format,read the value based on the option passed from user
+
+#refer the 23.getopts.sh file
+
 # -a option in read is used to store word read into sequential indices of array variable 
 
 read -p "Enter your details with space seperated: " -a my_details

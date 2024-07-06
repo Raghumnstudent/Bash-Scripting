@@ -436,7 +436,9 @@ you might want to consider using external libraries like getopt.
 getopts will iterate over the arguments passed into script after the script name and get read of the value if that option have value.
 getopts will validate the passed arguments with options mentioned in optionstring.
 
-every letter in string will represents the one option and we must mention the : after every letter if that option is argument and for flag no need to mention this symbol : 
+every letter in string will represents the one option and we must mention the : after every letter if that option is argument and for flag no need to mention this symbol :
+
+getops will process the options and arguments passed to script one by one. if it is only option, getops store to avriable. if it argument, store option in varible and it's value into OPTARG varible
 
 Syntax:
 

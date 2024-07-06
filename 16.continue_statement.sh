@@ -6,6 +6,10 @@
 #Modified date:
 #!/bin/bash
 
+
+#continue statement is used to skip operation when some condition are meet,means do nothing when condition meet
+
+
 #iterate over the 1 to 10
 echo "skiping the even numbers"
 for ((i=0; i<=10; i++))

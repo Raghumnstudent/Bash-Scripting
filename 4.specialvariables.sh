@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #Author: Raghu M N
 #Vesrion: 
 #Purpose: Understanding the special varibales

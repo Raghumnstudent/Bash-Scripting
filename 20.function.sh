@@ -5,6 +5,26 @@
 #Created date: Tuesday 11 July 2023 09:19:56 AM IST
 #Modified date:
 
+
+<<details
+syntax:
+
+name_of_function(){
+       code of function to perform task
+}
+
+calling the function by it's name
+
+name_of_function 
+
+
+if you want to pass the argument to function, pass it in front of function name and using that argument using positional argument
+
+what if we need beyon $9 argument ,mean 10 or more than 10?
+yes you can access using ${10} ${11} and so on
+
+details
+
 : '
 backup (){
       if [ -f $1 ]
