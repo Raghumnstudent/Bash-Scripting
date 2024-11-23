@@ -19,15 +19,29 @@ $#  --> it set to number of arguments specified,count the numbers arguments pass
 
 $$  --> process id of current script
 
+$!  --> process id of the last background job
+
 $0  --> The filename of the current script
 
 $1  --> stores the first argument passed after file name,we can give nine postional arguments to script and get by $1 $2 ... $9
 
-"$@" --> each quoted string treated as a seperate argument
+"$@" --> it will also work as $* but when we pass argument within the quote, it will treated quoted argument as a seperate argument
+we have use $@ within double quotes
+ex: ./test.sh Raghu "Ravi M N" --> here "$@" store Ravi M N as single argument
 
+test.sh 
+for i in $*
+do
+    echo $i ----- 
+done
+
+for j in "$@"
+do
+    echo $j
+done
+ 
 $?  --> exit status of last command
 
-$!  --> process id of the last background job
 commenting
 
 echo "Pass the arguments while executing this script"

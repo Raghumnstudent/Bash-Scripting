@@ -12,7 +12,7 @@
 
 #iterate over the 1 to 10
 echo "skiping the even numbers"
-for ((i=0; i<=10; i++))
+for i in $(seq 1 10 )
 do
     #checking if the value is even based on remainder,if even skip that iteration
     if [ $(($i%2)) -eq 0 ]

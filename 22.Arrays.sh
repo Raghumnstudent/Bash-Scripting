@@ -16,7 +16,9 @@ you can easily iterate over the value
 2)Assosiated array --> First we need to declare array using declare key with -A option. 
 Assosiative array will give option to define the key and add value to it
 
+When we need to print value of any variable,just use $<name_of_variable>
 
+when we working with array,use {} and printing the array's values ${name_of_array[@]} and printing keys of array ${!name_of_array[@]}
 
 details
 
@@ -26,6 +28,7 @@ months=("Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec")
 
 #or
 # declare -a months  --> i will always go with direct creation of array, not delcare index array
+
 
 #access value from array using index --> ${months[6]}
 echo "The my birthday date is 13-${months[6]}-1999"

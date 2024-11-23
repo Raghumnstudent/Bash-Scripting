@@ -10,18 +10,18 @@
 
 syntax:
 
-case value_to_be_checke
+case value_to_be_checke in
 actual_value_1)
-    block of code execution for actual value 1 satisfaction
+block of code execution for actual value 1 satisfaction
 ;;
 actual_value_2)
-    block of code execution for actual value 2 satisfaction
+block of code execution for actual value 2 satisfaction
 ;;
 actual_value_3)
-    block of code execution for actual value 3 satisfaction
+block of code execution for actual value 3 satisfaction
 ;;
 actual_value_4)
-    block of code execution for actual value 4 satisfaction
+block of code execution for actual value 4 satisfaction
 ;;
 *)
   echo "invalid option"
@@ -67,15 +67,19 @@ read -p "Enter the name of fruit: " fruit
 case $fruit in
 apple | Apple | APPLE)
 echo "you entered fruit is apple"
+echo "Available juices in Apple are a1 a2 a3"
 ;;
 banana | Banana | BANANA)
 echo "you entered fruit is banana"
+echo "Available juices in Banana are b1 b2 b3"
 ;;
 orange | Orange | ORANGE)
 echo "you entered fruit is orange"
+echo "Available juices in Orange are o1 o2 o3"
 ;;
 graps | Graps | GRAPS)
 echo "you entered fruit is graps"
+echo "Available juices in Grap are g1 g2 g3"
 ;;
 *)
 echo "unknow fruit"

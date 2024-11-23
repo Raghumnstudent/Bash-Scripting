@@ -7,7 +7,7 @@
 
 # ./countarg.sh * --> * means current path, how many files are available in the current path
 # ./countarg.sh Raghu Ravi Raju --> output is three 
-echo "your current given arguments are $#"
+echo "your currently given arguments are $#"
 
 if [ $# -lt 1 ];then
 echo "The program usage is ./countarg.sh options"

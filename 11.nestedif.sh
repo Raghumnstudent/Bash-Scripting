@@ -17,19 +17,19 @@ then
     echo "The avrage mark is $avg"
     if [ $avg -ge 75 ]
     then
-    echo "Congratulation, You got distinction"
+        echo "Congratulation, You got distinction"
     elif [ $avg -ge 60 -a $avg -lt 75 ]
     then
-    echo "Congratulation, you got first class"
+        echo "Congratulation, you got first class"
     elif [ $avg -ge 50 -a $avg -lt 60 ]
     then
-    echo "Congratulation,you got second class"
+        echo "Congratulation,you got second class"
     elif [ $avg -ge 40 -a $avg -lt 50 ]
     then 
-    echo "Congratulation, you got third class"
+        echo "Congratulation, you got third class"
     else
-    echo "Congratulation,you have passed"
+        echo "Congratulation,you have passed"
     fi
 else
-echo "You are failed"
+   echo "You are failed"
 fi

@@ -1,4 +1,5 @@
-The difference between the scripting and automating:
+
+The difference between the scripting and progaming:
 scripting                                                         programing
 *write to automate the particular task                      *one program can do many tasks
 *do not require the compiling,it is interpreter             *must compile to execute
@@ -210,9 +211,11 @@ $!  --> process id of the last background job
 
 *if,elif and else condition operators and format
 
-     if [condition];then
+     if [condition]
+     then
         statement 1
-     elif [condition];then
+     elif [condition]
+     then
         statement
      else
         statement
@@ -234,16 +237,27 @@ Relatinal operators:
        * = or == --> equal to   if [ "$a" == "$b" ] or if [ "$a" = "$b" ] both are same
        * !=      --> not equal  if [ "$a" != "$b" ] 
        * -z --> string is null,has zero length if [ -z "$a" ]
+       * -n --> string is non empty
 
+  file conditions
+  
+  -e file_path  ----> To check the file exits or not
+  -f file_path  ----> To check file exit or not and is it regular file or not 
+  -d directory_path --> to check directory exits or not
+  -s file_path --> check file is exits and file is non-empty 
+  -r file_path --> check file is readiable access or not 
+  -w file_path --> check file is write access or not
+  -x file_path --> check file is executable
+ 
 =========================================================================================
 Logical operators: To write multiple conditions,validate mutiple conditions and execute the statement
 
 In logical operatos,i always go with letters approach to with one approach
 
-AND  --> -a or &&               OR   --> -o or ||                  NOT  --> -n or ! 
+AND  --> -a or &&               OR   --> -o or ||                  NOT  --> ! 
 
-[ 1 -a 1 ] --> 1                  [ 1 -o 1 ] --> 1                -n [ 0 ]  --> 1 
-[ 1 -a 0 ] --> 0                  [ 1 -o 0 ] --> 1                -n [ 1 ]  --> 0
+[ 1 -a 1 ] --> 1                  [ 1 -o 1 ] --> 1                ! [ 0 ]  --> 1 
+[ 1 -a 0 ] --> 0                  [ 1 -o 0 ] --> 1                ! [ 1 ]  --> 0
 [ 0 -a 1 ] --> 0                  [ 0 -o 1 ] --> 1
 [ 0 -a 0 ] --> 0                  [ 0 -o 0 ] --> 0      
 
@@ -253,7 +267,7 @@ Example:i am using leters
 
 [ 3 -lt 5 -o 6 -gt 5 ]   --> 1  any one value is true Result is True
 
--n [ 5 -gt 4 ]   --> 0 
+! [ 5 -gt 4 ]   --> 0 
        
 
 =========================================================================================
@@ -262,36 +276,42 @@ if, elif , else conditional statements
 
 syntax:
 
-                if [ condition1 ];then
-                ...
-                ...
-                elif [ condition2 ];then
-                ...
-                ...
-                elif [ condition3 ];then
-                ...
-                ...
+                if [ condition1 ]
+                then
+                    ...
+                    ...
+                elif [ condition2 ]
+                then
+                    ...
+                    ...
+                elif [ condition3 ]
+                then
+                    ...
+                    ...
                 else
-                ...
-                ...
+                    ...
+                    ...
                 fi
 
 nested if:
 
-if [ condition1 ];then
-   if [ condition2 ];then 
-   .....
-   .....
-   elif [ condition3 ];then
-   ....
-   ....
+if [ condition1 ]
+then
+   if [ condition2 ]
+   then 
+   	.....
+   	.....
+   elif [ condition3 ]
+   then
+   	....
+   	....
    else
-   ....
-   ....
+   	....
+   	....
    fi
 else
-....
-....
+   ....
+   ....
 fi
 
 =========================================================================================
@@ -303,9 +323,9 @@ syntax:
 
 while [ condition ]
 do
-...
-...
-...
+   ...
+   ...
+   ...
 done
 
 =========================================================================================
@@ -316,7 +336,7 @@ syntax:
 
 for <variable> in <values to variables>
 do
-<execution commands>
+    <execution commands>
 done
 
 =========================================================================================

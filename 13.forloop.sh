@@ -16,13 +16,13 @@ details
 
 for i in `cat hostfile`
 do
-ping -c 1 $i > pingresult.txt
-if [ $? -eq 0 ]
-then
-echo "The server $i looks fine"
-else
-echo "The sever $i not able to ping"
-fi
+    ping -c 1 $i > pingresult.txt
+    if [ $? -eq 0 ]
+    then
+       echo "The server $i looks fine"
+    else
+       echo "The sever $i not able to ping"
+    fi
 done
 
 #using build-in seq to iterate over the numbers in for loop
@@ -41,12 +41,4 @@ done
 
 #writing the for loop in single line
 for n in $(seq 1 3 10);do echo "$n";done
-
-
-
-
-
-
-
-
 

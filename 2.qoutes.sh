@@ -6,7 +6,7 @@
 #Modified date:
 
 name=Ravi
-age=23
+age=24
 
 #double quotes --> print message alone value of that varibale
 echo "The my name is $name and my age is $age"

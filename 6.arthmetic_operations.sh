@@ -13,13 +13,13 @@ read -p "Please enter another value:" b
 echo "Addtion $(($a+$b))"
 
 if [ $a -gt $b ];then
-echo "Subtraction $(($a-$b))"
-echo "Divition $(($a/$b))"
-echo "this Divition giving the remainder $(($a%$b))"
+   echo "Subtraction $(($a-$b))"
+   echo "Divition $(($a/$b))"
+   echo "this Divition giving the remainder $(($a%$b))"
 else
-echo "Subtraction $(($b-$a))"
-echo "Divition $(($b/$a))"
-echo "this Divition giving the remainder $(($b%$a))"
+   echo "Subtraction $(($b-$a))"
+   echo "Divition $(($b/$a))"
+   echo "this Divition giving the remainder $(($b%$a))"
 fi
 
 echo "Multiplecation $(($a*$b))"

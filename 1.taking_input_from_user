@@ -25,6 +25,8 @@ read -p "Enter your details with space seperated: " -a my_details
 
 echo "accessing the values present in array ${my_details[@]}"
 
+#!/bin/bash
+age=24
 echo "accessing the keys present in array ${!my_details[@]}"
 
 #have many other options in read like -d is used to mention delimcontinue until the first character of DELIM is read, rather than newline
