@@ -20,7 +20,7 @@ fi
 #OR -o operation
 read -p "Enter your age: " age
 
-if [ $age -ge 1 -a $age -le 10 ]
+if [ $age >= 1 -a $age -le 10 ]
 then
    echo "You are child"
 elif [ $age -gt 10 -a $age -le 20 ]

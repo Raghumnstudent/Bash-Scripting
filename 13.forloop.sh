@@ -42,3 +42,7 @@ done
 #writing the for loop in single line
 for n in $(seq 1 3 10);do echo "$n";done
 
+servers=("server1" "server2" "server3")
+for server in "${servers[@]}"; do
+    configure_monitoring_agent "$server"
+done
